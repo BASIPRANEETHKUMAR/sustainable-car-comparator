@@ -57,6 +57,7 @@ Sustainable-Car-Comparator/
 
 ---
 USE CASE DIAGRAM
+
 <img width="439" height="598" alt="Screenshot 2025-10-18 214330" src="https://github.com/user-attachments/assets/6bead78e-67b2-4fd5-a53f-eefc6a594fbb" />
 
  ---
