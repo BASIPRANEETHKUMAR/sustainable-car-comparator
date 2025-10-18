@@ -1,0 +1,46 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+h2 { color: #1e3a8a; margin-bottom: 20px; }
+label { font-weight: 500; display: block; text-align: left; }
+select, input, button {
+  width: 100%; padding: 10px; margin: 10px 0;
+  border-radius: 8px; border: 1px solid #ccc; font-size: 15px;
+  transition: all 0.3s;
+}
+button { background: #2563eb; color: white; border: none; cursor: pointer; }
+button:hover { background: #1d4ed8; transform: scale(1.05); }
+
+@keyframes fadeIn { 0% {opacity:0; transform:translateY(-20px);} 100% {opacity:1; transform:translateY(0);} }
+
+/* Result page */
+.result-container {
+  background: white; padding: 30px; border-radius: 20px;
+  max-width: 700px; text-align: center; box-shadow:0 4px 20px rgba(0,0,0,0.1);
+  opacity:0; transform:translateY(20px); animation: slideFade 0.8s forwards;
+}
+.result-container img { width: 100%; border-radius: 15px; margin-bottom:15px; }
+@keyframes slideFade { 0% {opacity:0; transform:translateY(20px);} 100% {opacity:1; transform:translateY(0);} }
+.result-container button { margin-top:20px; padding:10px 20px; background:#2563eb; border:none; color:white; border-radius:8px; cursor:pointer; }
+.result-container button:hover { background:#1d4ed8; }

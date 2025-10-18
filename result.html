@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparison Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="result-container" id="result"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const data = JSON.parse(localStorage.getItem("result"));
+
+      if (data) {
+        const container = document.getElementById("result");
+        container.innerHTML = `
+          <img src="${data.car.img}" alt="${data.modelName}">
+          <h2>${data.brand} ${data.modelName}</h2>
+          <p><b>Fuel Type:</b> ${data.car.fuelType}</p>
+          <p><b>Distance:</b> ${data.distance} km</p>
+          <p><b>Efficiency:</b> ${data.car.efficiency} km/l</p>
+          <p><b>Fuel Used:</b> ${data.fuelUsed} liters</p>
+          <p><b>Emission:</b> ${data.emission} kg CO₂</p>
+          <p><b>Estimated Cost:</b> ₹${data.tripCost}</p>
+          <button id="backBtn">🔁 Compare Another</button>
+        `;
+        container.style.opacity = 0;
+        container.style.transform = "translateY(20px)";
+        setTimeout(() => {
+          container.style.transition = "opacity 0.5s, transform 0.5s";
+          container.style.opacity = 1;
+          container.style.transform = "translateY(0)";
+        }, 50);
+
+        document.getElementById("backBtn").addEventListener("click", () => {
+          container.style.opacity = 0;
+          container.style.transform = "translateY(20px)";
+          setTimeout(() => { window.location.href = "index.html"; }, 500);
+        });
+      } else {
+        document.getElementById("result").innerHTML = "<p>No data found. Go back and enter details.</p>";
+      }
+    });
+  </script>
+</body>
+</html>
