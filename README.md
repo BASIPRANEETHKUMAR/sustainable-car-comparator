@@ -57,30 +57,8 @@ Sustainable-Car-Comparator/
 
 ---
 USE CASE DIAGRAM
-+-------------------+
-          |       User        |
-          +-------------------+
-             /     |     \
-            /      |      \
-           v       v       v
-+-----------------+   +------------------+
-| Select Brand    |   | Enter Distance   |
-+-----------------+   +------------------+
-           \             /
-            v           v
-          +--------------------+
-          |  Compare Vehicle   |
-          +--------------------+
-                    |
-                    v
-          +--------------------+
-          |  Display Result    |
-          +--------------------+
-                    ^
-                    |
-          +--------------------+
-          | View Another Car   |
-          +--------------------+
+<img width="439" height="598" alt="Screenshot 2025-10-18 214330" src="https://github.com/user-attachments/assets/6bead78e-67b2-4fd5-a53f-eefc6a594fbb" />
+
  ---
 ⚙ How to Run
 
